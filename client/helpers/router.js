@@ -39,3 +39,5 @@ Meteor.Router.filters({
 		return page;  
 	} });
 Meteor.Router.filter('requireLogin', {only: 'postSubmit'}); Meteor.Router.filter('clearErrors');
+
+Meteor.Router.add({  '/': {to: 'newPosts', as: 'home'},  '/best': 'bestPosts',  '/new': 'newPosts',
