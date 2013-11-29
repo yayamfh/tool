@@ -3,7 +3,8 @@ Template.commentSubmit.events({
 	{    
 		e.preventDefault();
     var $body = $(e.target).find('[name=body]');    
-    var comment = {      body: $body.val(),      
+    var comment = {      
+        body: $body.val(),      
     	postId: template.data._id    
     };
     Meteor.call('comment', comment, function(error, commentId) 
@@ -14,4 +15,5 @@ Template.commentSubmit.events({
     			$body.val('');      
     		}    
     	});  
-} });
+} 
+});
